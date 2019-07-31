@@ -56,6 +56,16 @@ end
 
 require 'test/unit'
 
+class Game
+  attr_accessor :player, :dealer
+
+  def Hello
+    puts "Hello"
+  end
+
+end
+
+
 class CardTest < Test::Unit::TestCase
   def setup
     @card = Card.new(:hearts, :ten, 10)
@@ -92,3 +102,4 @@ class DeckTest < Test::Unit::TestCase
     assert_equal @deck.playable_cards.size, 52
   end
 end
+
